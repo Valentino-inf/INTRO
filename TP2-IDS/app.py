@@ -23,4 +23,4 @@ def registration():
     return "<h1>Registration Page</h1>"
 
 if __name__ == "__main__":
-    app.run("127.0.0.1", port="5001", debug=True)
+    app.run("127.0.0.1", port="5002", debug=True)

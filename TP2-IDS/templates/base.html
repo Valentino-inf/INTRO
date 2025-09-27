@@ -15,15 +15,12 @@
 </head>
 <body>
     {% block header %}
-    <!-- Puedes poner aquí el header común si lo quieres en todas las páginas -->
     {% endblock %}
 
     {% block content %}
-    <!-- Aquí va el contenido específico de cada página hija -->
     {% endblock %}
 
     {% block footer %}
-    <!-- Puedes poner aquí el footer común si lo quieres en todas las páginas -->
     {% endblock %}
 
     <script src="{{ url_for('static', filename='assets/plugins/popper.min.js') }}"></script>
