@@ -17,7 +17,7 @@ info_evento =  {
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("paginatemp.html")
 @app.route("/registration")
 def registration():
     return "<h1>Registration Page</h1>"
