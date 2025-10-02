@@ -20,7 +20,7 @@ def index():
     return render_template("index.html")
 @app.route("/registration")
 def registration():
-    return "<h1>Registration Page</h1>"
+    return render_template("registration.html")
 
 if __name__ == "__main__":
     app.run("127.0.0.1", port="5002", debug=True)
