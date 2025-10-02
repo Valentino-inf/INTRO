@@ -21,7 +21,10 @@ def index():
 @app.route("/registration", methods=["GET", "POST"])
 def registration():
     if request.method == "POST":
-        pass
+        nombre = request.form.get("nombre")
+        email = request.form.get("email")
+        modalidad = request.form.get("modalidad")
+        print("POST recibido:", nombre, email, modalidad)
     return render_template("registration.html")
 
 if __name__ == "__main__":
