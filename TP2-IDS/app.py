@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 info_evento =  {
@@ -18,7 +18,7 @@ info_evento =  {
 @app.route("/")
 def index():
     return render_template("index.html")
-@app.route("/registration")
+@app.route("/registration", methods=["GET", "POST"])
 def registration():
     if request.method == "POST":
         pass
