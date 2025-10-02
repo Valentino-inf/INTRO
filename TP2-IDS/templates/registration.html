@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Inscripción – Rally MTB{% endblock %}
+
+{% block content %}
+<section class="container py-4">
+  <h1 class="mb-3">Inscripción</h1>
+
+  <!-- Foto (asegurate que exista static/images/mtb-cover.jpg) -->
+  <figure class="mb-4">
+    <img src="{{ url_for('static', filename='images/mtb-cover.jpg') }}" alt="MTB rural" class="img-fluid rounded">
+  </figure>
+
+  <!-- Formulario mínimo -->
+  <form action="{{ url_for('register') }}" method="post">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre y Apellido</label>
+        <input id="nombre" name="nombre" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="email" class="form-control" required>
+      </div>
+      <div class="col-md-4">
+        <label for="modalidad" class="form-label">Modalidad</label>
+        <select id="modalidad" name="modalidad" class="form-select" required>
+          <option value="" disabled selected>Elegí…</option>
+          <option value="corta">Corta (30 km)</option>
+          <option value="larga">Larga (80 km)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mt-4 d-flex gap-2">
+      <button class="btn btn-primary" type="submit">Enviar inscripción</button>
+      <a class="btn btn-outline-secondary" href="{{ url_for('index') }}">Volver</a>
+    </div>
+  </form>
+</section>
+{% endblock %}
