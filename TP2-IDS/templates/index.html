@@ -7,9 +7,9 @@
 		<div class="branding">
 			<div class="container-fluid">
 				<nav class="main-nav navbar navbar-expand-lg">
-					<div class="site-logo"><a class="scrollto" href="#hero-block"><img class="logo-icon" src="{{ url_for('static', filename='assets/images/logo-white.svg') }}" alt="logo"></a></div>    
+					<div class="site-logo"><a class="scrollto" href="#hero-block"><img class="logo-icon" src="{{ url_for('static', filename='assets/images/logos/bike.svg') }}" alt="logo"></a></div>    
 					
-					<div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Tickets</a></div>
+					<div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="{{ url_for('registration') }}"target="_blank">INSCRIBITE</a></div>
 					
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -18,11 +18,8 @@
 					<div id="navigation" class="navbar-collapse collapse  justify-content-lg-end me-lg-3">
 						<ul class="nav navbar-nav">
 							
-							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">About</a></li>                                              
-							<li class="nav-item"><a class="nav-link scrollto" href="#speakers-section">Speakers</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#schedule-section">Schedule</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#tickets-section">Tickets</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#venue-section">Venue</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">Sobre el evento</a></li>                                              
+							<li class="nav-item"><a class="nav-link scrollto" href="#tickets-section">Mapas</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#sponsors-section">Sponsors</a></li>
 						</ul><!--//nav-->
 					</div><!--//navabr-collapse-->
@@ -50,7 +47,7 @@
 				<h1 class="hero-heading mb-2">MTB RURAL 2025</h1>
 				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i>24 Oct, 8 am<i class="fas fa-map-marker-alt mx-2"></i>Tandil, Buenos aires</div>
 				<div class="hero-intro mb-4">El mayor evento de ciclismo rural <br>de la provincia.</div>
-				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Get Tickets</a></div>
+				<div class="hero-cta"><a class="btn btn-primary btn-lg"href="{{ url_for('static', filename='pdf/reglamento.pdf') }}"target="_blank">MIRA EL REGLAMENTO</a></div>
 				
 			</div><!--//hero-text-block-->
 		</div><!--//container-->
@@ -60,21 +57,21 @@
 	</div><!--//stats-block-->
 	<section id="about-section" class="about-section section theme-bg-light">
 		<div class="container">
-			<h3 class="section-heading text-center mb-3">sobre el evento</h3>
-			<div class="section-intro single-col-max mx-auto mb-4">La carrera de ciclismo rural mas grande de la provincia, va a tomar parte en la ciudad de Tandil en Buenos Aires el 24 de octubre a las 8am, va a contar con dos modalidades, una corta de 30km y otra larga de 80km.</div>
+			<h3 class="section-heading text-center mb-3">Rally MTB 2025</h3>
+			<div class="section-intro single-col-max mx-auto mb-4">El Club Social y Deportivo Unidos por el Deporte será sede del Rally MTB Rural 2025, una competencia pensada para todos los amantes del ciclismo de montaña. El evento se realizará el 24 de octubre de 2025 a las 8:00 hs en Tandil, Buenos Aires, y contará con dos modalidades: 30 km (Corta), ideal para quienes se inician en el MTB. 80 km (Larga), un desafío para los ciclistas más experimentados
 			<div class="benefits-list text-center mb-3">
 			</div><!--//benefits-list-->
 			<div class="event-countdown text-center mb-3">		   
-				<h4 class="countdown-intro mb-2 text-center mb-3">Event Starts In:</h4>
+				<h4 class="countdown-intro mb-2 text-center mb-3">El evento empieza en:</h4>
 				<div id="countdown-box" class="countdown-box"></div>
 			</div><!--//event-countdown-->
-			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Get Your Ticket Today</a></div>
+			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" href="{{ url_for('registration') }}"target="_blank">INSCRIPCIÓN</a></div>
 		</div><!--//container-->
 	
 
 	<section id="tickets-section" class="tickets-section section theme-bg-light">
 		<div class="container">
-			<h3 class="section-heading text-center mb-3">Tickets</h3>			
+			<h3 class="section-heading text-center mb-3">Mapas</h3>			
 			<div class="row pricing mb-5">
 				<div class="row pricing mb-5 justify-content-center">
 					<div class="card card-special rounded-0 border-0">
@@ -83,14 +80,10 @@
 								<h4 class="text-white mb-0">Carrera larga</h4>
 							</div>
 							<div class="info p-3">
-								<div class="price-figure text-center"><span class="currency">$</span><span class="number">2000</span></div>
-								<div class="desc px-3">
-									carrera larga de 80km
-								</div>
+								<div class="price-figure text-center"><iframe src="https://www.google.com/maps/d/embed?mid=1ieEVugOwPS1tOGuJ14bFMWcRid2euEI&ehbc=2E312F" width="640" height="480"></iframe></div>
 							</div><!--//info-->
 						</div><!--//card-body-->
 						<div class="card-footer text-center">
-							<a href="#" class="btn btn-primary">Buy Now</a>
 						</div>
 					</div><!--//card-->
 				</div><!--//col-->
@@ -100,30 +93,24 @@
 							<div class="heading  text-center p-3">
 								<h4 class="text-white mb-0">Carrera corta</h4>
 							</div>
-							<div class="info p-3">
-								<div class="price-figure text-center mb-3"><span class="currency">$</span><span class="number">1000</span></div>
-								<div class="desc px-3">
-									carrera corta de 30km						    
+							<div class="info p-3 text-center">
+								<iframe src="https://www.google.com/maps/d/embed?mid=1w5GwbF7PwsxtZkga-4MSyHIe4oWkY4I&ehbc=2E312F" width="640" height="480"></iframe>					    
 								</div>
 							</div><!--//info-->
 						</div><!--//card-body-->
 						<div class="card-footer text-center">
-							<a href="#" class="btn btn-primary">Buy Now</a>
 						</div>
 					</div><!--//card-->
 				</div><!--//col-->
 			</div><!--//pricing-->
 			
 			<div class="offers text-center bg-white p-4 p-lg-5">
-				<h4 class="mb-3">What's included?</h4>
+				<h4 class="mb-3">Kit de Carrera</h4>
 				<ul class="offers-list list-unstyled d-inline-block mx-auto text-start">
-					<li><span class="icon-holder me-2"><i class="fas fa-user-tie"></i></span>60+ talks from industry-leading speakers</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-people-carry"></i></span>Access to 40+ workshops</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-glass-cheers"></i></span>Amazing after-parties</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-utensils"></i></span>FREE drinks, refreshments, lunch and dinner</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-tshirt"></i></span>FREE <a href="https://made4dev.com/" target="_blank">premium developer tees from made4dev</a></li>
-					<li><span class="icon-holder me-2"><i class="fas fa-book"></i></span>FREE Udemy courses</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-gift"></i></span>FREE <a href="https://themes.3rdwavemedia.com/freebies/" target="_blank">Bootstrap templates and digital resources</a> for developers worth over $100</li>
+					<li><span class="icon-holder me-2"><i class="fas fa-tshirt me-2 text-primary"></i></span>Remera oficial del evento</li>
+					<li><span class="icon-holder me-2"><i class="fas fa-bottle-water me-2 text-primary"></i></span>Botella reutilizable y puntos de hidratación</li>
+					<li><span class="icon-holder me-2"><i class="fas fa-gift me-2 text-primary"></i></span>Bolsa con productos de auspiciantes</li>
+					<li><span class="icon-holder me-2"><i class="fas fa-medal me-2 text-primary"></i></span>Medalla de participación</li>
 				</ul><!--offers-list-->
 			</div><!--//offers-->
 
@@ -136,8 +123,6 @@
 			<h3 class="section-heading text-center mb-3">Sponsors</h3>
 			<div class="section-intro text-center single-col-max mx-auto mb-5">Quieres convertirte en sponsor del evento? haz click en el boton abajo.</div>
 			<div class="row logos justify-content-center">
-				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{{ url_for('static',filename= 'assets/images/logos/redbull.jpg')}}" alt=""></div>
-				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{{ url_for('static',filename= 'assets/images/logos/ypf2.png')}}" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{{ url_for('static',filename= 'assets/images/logos/logo-3.svg')}}" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{{ url_for('static',filename= 'assets/images/logos/logo-4.svg')}}" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{{ url_for('static',filename= 'assets/images/logos/logo-5.svg')}}" alt=""></div>
